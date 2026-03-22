@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Hotel de Lujo The Grand Obsidian</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar" aria-label="Navegacion principal">
+            <div class="logo">OBSIDIAN<span>HOTEL</span></div>
+
+            <button class="menu-toggle" id="menu-btn" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero" aria-labelledby="contact-hero-title">
+            <div class="contact-hero__overlay">
+                <div class="contact-hero__content">
+                    <span class="subtitle">CONSERJERIA Y RESERVAS</span>
+                    <h1 id="contact-hero-title">Permitenos Curar Tu Estadia</h1>
+                    <p>Comparte tus planes, preferencias y fechas de viaje. Nuestro equipo preparara una respuesta personalizada con la atencion que tu visita merece.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-layout" aria-labelledby="contact-form-title">
+            <div class="contact-layout__grid">
+                <article class="contact-form-card">
+                    <span class="section-kicker">ENVIA UNA SOLICITUD</span>
+                    <h2 id="contact-form-title">Formulario de reserva y consulta</h2>
+
+                    <form class="contact-form" action="#" method="post">
+                        <div class="contact-form__row">
+                            <div class="form-group">
+                                <label for="full-name">Nombre Completo</label>
+                                <input type="text" id="full-name" name="full_name" class="form-input" placeholder="Tu nombre completo" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email-address">Correo Electronico</label>
+                                <input type="email" id="email-address" name="email_address" class="form-input" placeholder="nombre@ejemplo.com" required>
+                            </div>
+                        </div>
+
+                        <div class="contact-form__row">
+                            <div class="form-group">
+                                <label for="phone-number">Numero de Telefono</label>
+                                <input type="tel" id="phone-number" name="phone_number" class="form-input" placeholder="+1 (555) 000-0000">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guest-count">Numero de Huespedes</label>
+                                <input type="number" id="guest-count" name="guest_count" class="form-input" min="1" placeholder="2">
+                            </div>
+                        </div>
+
+                        <div class="contact-form__row">
+                            <div class="form-group">
+                                <label for="arrival-date">Fecha de Llegada</label>
+                                <input type="date" id="arrival-date" name="arrival_date" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="departure-date">Fecha de Salida</label>
+                                <input type="date" id="departure-date" name="departure_date" class="form-input">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="request-type">Tipo de Solicitud</label>
+                            <select id="request-type" name="request_type" class="form-input">
+                                <option value="reservation">Consulta de Reserva</option>
+                                <option value="event">Evento Privado</option>
+                                <option value="spa">Reserva de Bienestar</option>
+                                <option value="dining">Reserva Gastronomica</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guest-message">Cuentanos Sobre Tu Estadia</label>
+                            <textarea id="guest-message" name="guest_message" class="form-input form-textarea" rows="6" placeholder="Detalles de llegada, solicitudes especiales, preferencias de habitacion o planes de celebracion"></textarea>
+                        </div>
+
+                        <button type="submit" id="contact-submit" name="contact_submit" class="btn-gold-ghost fill form-submit-btn">Enviar Consulta</button>
+                    </form>
+                </article>
+
+                <aside class="contact-sidebar" aria-labelledby="contact-details-title">
+                    <article class="contact-info-card">
+                        <span class="section-kicker">CONTACTO DIRECTO</span>
+                        <h2 id="contact-details-title">Contacta al hotel</h2>
+
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <h3>Direccion</h3>
+                                <p>Avenida Obsidian 88, Distrito Financiero, Nueva York, NY 10007</p>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <h3>Telefono</h3>
+                                <p><a href="tel:+12125550188">+1 (212) 555-0188</a></p>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <h3>Correo</h3>
+                                <p><a href="mailto:conserjeria@obsidianhotel.com">conserjeria@obsidianhotel.com</a></p>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <h3>Horario</h3>
+                                <p>Asistencia de conserjeria disponible las 24 horas, todos los dias.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <section class="map-card" aria-labelledby="map-title">
+                        <span class="section-kicker">UBICACION</span>
+                        <h2 id="map-title">En el centro de la ciudad</h2>
+                        <div class="map-visual" role="img" aria-label="Mapa ilustrativo que muestra el hotel Grand Obsidian cerca de avenidas principales y un parque central">
+                            <div class="map-visual__grid"></div>
+                            <div class="map-visual__marker">
+                                <span>OBSIDIAN</span>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-logo">OBSIDIAN</div>
+        <p>&copy; 2026 The Grand Obsidian. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+@use 'variables' as *;
+
+.contact-hero {
+    height: 62vh;
+    background: url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+
+    &__overlay {
+        height: 100%;
+        background: linear-gradient(180deg, rgba(18, 18, 18, 0.55) 0%, rgba(18, 18, 18, 0.8) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1.5rem;
+    }
+
+    &__content {
+        max-width: 760px;
+        color: $white;
+
+        h1 {
+            font-family: $font-header;
+            font-size: clamp(2.8rem, 8vw, 4.8rem);
+            margin: 1rem 0;
+            line-height: 1.05;
+        }
+
+        p {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.88);
+        }
+    }
+}
+
+.contact-layout {
+    padding: 5rem 1.5rem 7rem;
+
+    &__grid {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        gap: 2rem;
+        align-items: start;
+    }
+}
+
+.contact-form-card,
+.contact-info-card,
+.map-card {
+    background-color: $white;
+    @include shadow-soft;
+}
+
+.contact-form-card {
+    padding: 2.5rem;
+
+    h2 {
+        font-family: $font-header;
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: $dark-obsidian;
+        line-height: 1.05;
+        margin-bottom: 2rem;
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &__row {
+        display: grid;
+        gap: 1.5rem;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+
+    label {
+        color: $dark-obsidian;
+        font-size: 0.78rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+.form-input {
+    width: 100%;
+    border: 1px solid rgba(18, 18, 18, 0.12);
+    background-color: $light-bone;
+    color: $dark-obsidian;
+    padding: 1rem 1.1rem;
+    font-family: $font-body;
+    font-size: 0.95rem;
+    transition: $transition-long;
+
+    &:focus {
+        outline: none;
+        border-color: $primary-gold;
+        background-color: $white;
+        box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.12);
+    }
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 170px;
+}
+
+.form-submit-btn {
+    align-self: flex-start;
+}
+
+.contact-sidebar {
+    display: grid;
+    gap: 2rem;
+}
+
+.contact-info-card,
+.map-card {
+    padding: 2.5rem;
+
+    h2 {
+        font-family: $font-header;
+        font-size: 2rem;
+        color: $dark-obsidian;
+        margin-bottom: 2rem;
+    }
+}
+
+.contact-info-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact-info-item {
+    h3 {
+        font-size: 0.78rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $primary-gold;
+        margin-bottom: 0.5rem;
+    }
+
+    p,
+    a {
+        color: $text-muted;
+        text-decoration: none;
+        font-weight: 300;
+    }
+
+    a:hover {
+        color: $dark-obsidian;
+    }
+}
+
+.map-visual {
+    position: relative;
+    min-height: 320px;
+    background: linear-gradient(135deg, #f1ede4 0%, #ffffff 100%);
+    overflow: hidden;
+    border: 1px solid rgba(18, 18, 18, 0.08);
+
+    &__grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(18, 18, 18, 0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(18, 18, 18, 0.08) 1px, transparent 1px),
+            linear-gradient(120deg, rgba(197, 160, 89, 0.3) 0%, rgba(197, 160, 89, 0) 35%);
+        background-size: 54px 54px, 54px 54px, 100% 100%;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: rgba(18, 18, 18, 0.08);
+    }
+
+    &::before {
+        width: 180%;
+        height: 14px;
+        top: 46%;
+        left: -20%;
+        transform: rotate(-18deg);
+    }
+
+    &::after {
+        width: 14px;
+        height: 160%;
+        top: -20%;
+        left: 62%;
+        transform: rotate(18deg);
+    }
+
+    &__marker {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 108px;
+        height: 108px;
+        border-radius: 50%;
+        background-color: rgba(18, 18, 18, 0.92);
+        border: 2px solid $primary-gold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        @include shadow-hover;
+
+        span {
+            color: $white;
+            font-size: 0.72rem;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-form__row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1100px) {
+    .contact-layout__grid {
+        grid-template-columns: minmax(0, 1.35fr) minmax(340px, 0.75fr);
+    }
+}
