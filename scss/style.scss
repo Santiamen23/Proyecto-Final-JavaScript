@@ -1,0 +1,141 @@
+@use 'variables';
+@use 'services';
+
+// Reset and Base Styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: variables.$light-bone;
+    overflow-x: hidden;
+    font-family: variables.$font-body;
+}
+
+// Basic Header/Footer styles to support the structure
+.main-header {
+    background-color: transparent;
+    padding: 2rem 0;
+    color: variables.$white;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+
+        .logo {
+            font-size: 1.5rem;
+            font-family: variables.$font-header;
+            letter-spacing: 4px;
+            span { color: variables.$primary-gold; }
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: 2.5rem;
+            
+            &.active {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0; left: 0;
+                width: 100%; height: 100vh;
+                background-color: variables.$dark-obsidian;
+                justify-content: center;
+                align-items: center;
+                z-index: 200;
+            }
+
+            a {
+                color: variables.$white;
+                text-decoration: none;
+                font-family: variables.$font-body;
+                font-size: 0.8rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                &.active { color: variables.$primary-gold; }
+            }
+        }
+
+        .menu-toggle {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .bar {
+                width: 30px;
+                height: 1px;
+                background-color: variables.$white;
+            }
+        }
+    }
+}
+
+.main-footer {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: variables.$dark-obsidian;
+    color: variables.$white;
+    margin-top: 3rem;
+}
+
+// Modal Basic Overlay
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(18, 18, 18, 0.95);
+    display: none; // Controlled by JS
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .modal-content {
+        background: variables.$white;
+        padding: 5rem 3rem;
+        border-radius: variables.$border-radius;
+        max-width: 550px;
+        text-align: center;
+        position: relative;
+
+        .close-modal {
+            position: absolute;
+            top: 2rem; right: 2rem;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: variables.$dark-obsidian;
+        }
+
+        .btn-gold-ghost.fill {
+            margin-top: 1.5rem;
+            padding: 1.2rem 2.5rem;
+            background-color: variables.$primary-gold;
+            color: variables.$white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .main-header .navbar {
+        .menu-toggle { display: none; }
+        .nav-links {
+            display: flex;
+            position: static;
+            padding: 0;
+            flex-direction: row;
+        }
+    }
+}

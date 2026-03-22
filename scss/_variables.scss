@@ -1,0 +1,26 @@
+// --- High-End Color Palette ---
+$primary-gold:    #C5A059; // Muted Champagne Gold
+$accent-gold:     #D4AF37; // Bright Metallic Gold
+$dark-obsidian:   #121212; // Deep Charcoal/Black
+$light-bone:      #F8F8F8; // Off-white Background
+$white:           #FFFFFF;
+$text-muted:      #888888;
+$glass-overlay:   rgba(18, 18, 18, 0.6);
+
+// --- Typography ---
+$font-header:     'Playfair Display', serif;
+$font-body:       'Montserrat', sans-serif;
+
+// --- UI Elements ---
+$spacing-unit:    1rem;
+$border-radius:   0px; // Sharp, architectural edges feel more "High-End" than rounded
+$transition-long: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+// --- Mixins for shadows to keep it clean ---
+@mixin shadow-soft {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+@mixin shadow-hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
