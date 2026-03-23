@@ -6,8 +6,6 @@
 @use 'contact';
 @use 'responsive';
 
-@use 'variables' as *;
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,16 +13,16 @@
 }
 
 body {
-  background-color: $light-bone;
+  background-color: variables.$light-bone;
   overflow-x: hidden;
-  font-family: $font-body;
-  color: $dark-obsidian;
+  font-family: variables.$font-body;
+  color: variables.$dark-obsidian;
   line-height: 1.6;
 }
 
 .section-kicker {
   display: inline-block;
-  color: $primary-gold;
+  color: variables.$primary-gold;
   font-size: 0.75rem;
   letter-spacing: 3px;
   text-transform: uppercase;

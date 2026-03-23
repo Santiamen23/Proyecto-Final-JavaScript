@@ -1,8 +1,8 @@
-@use 'variables' as *;
+@use 'variables';
 
 .contact-hero {
     height: 62vh;
-    background: url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+    background: url('../images/hotelroom.jpg') center/cover no-repeat;
 
     &__overlay {
         height: 100%;
@@ -16,10 +16,10 @@
 
     &__content {
         max-width: 760px;
-        color: $white;
+        color: variables.$white;
 
         h1 {
-            font-family: $font-header;
+            font-family: variables.$font-header;
             font-size: clamp(2.8rem, 8vw, 4.8rem);
             margin: 1rem 0;
             line-height: 1.05;
@@ -48,17 +48,17 @@
 .contact-form-card,
 .contact-info-card,
 .map-card {
-    background-color: $white;
-    @include shadow-soft;
+    background-color: variables.$white;
+    @include variables.shadow-soft;
 }
 
 .contact-form-card {
     padding: 2.5rem;
 
     h2 {
-        font-family: $font-header;
+        font-family: variables.$font-header;
         font-size: clamp(2rem, 5vw, 3rem);
-        color: $dark-obsidian;
+        color: variables.$dark-obsidian;
         line-height: 1.05;
         margin-bottom: 2rem;
     }
@@ -81,7 +81,7 @@
     gap: 0.65rem;
 
     label {
-        color: $dark-obsidian;
+        color: variables.$dark-obsidian;
         font-size: 0.78rem;
         letter-spacing: 2px;
         text-transform: uppercase;
@@ -92,17 +92,17 @@
 .form-input {
     width: 100%;
     border: 1px solid rgba(18, 18, 18, 0.12);
-    background-color: $light-bone;
-    color: $dark-obsidian;
+    background-color: variables.$light-bone;
+    color: variables.$dark-obsidian;
     padding: 1rem 1.1rem;
-    font-family: $font-body;
+    font-family: variables.$font-body;
     font-size: 0.95rem;
-    transition: $transition-long;
+    transition: variables.$transition-long;
 
     &:focus {
         outline: none;
-        border-color: $primary-gold;
-        background-color: $white;
+        border-color: variables.$primary-gold;
+        background-color: variables.$white;
         box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.12);
     }
 }
@@ -126,9 +126,9 @@
     padding: 2.5rem;
 
     h2 {
-        font-family: $font-header;
+        font-family: variables.$font-header;
         font-size: 2rem;
-        color: $dark-obsidian;
+        color: variables.$dark-obsidian;
         margin-bottom: 2rem;
     }
 }
@@ -143,19 +143,19 @@
         font-size: 0.78rem;
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: $primary-gold;
+        color: variables.$primary-gold;
         margin-bottom: 0.5rem;
     }
 
     p,
     a {
-        color: $text-muted;
+        color: variables.$text-muted;
         text-decoration: none;
         font-weight: 300;
     }
 
     a:hover {
-        color: $dark-obsidian;
+        color: variables.$dark-obsidian;
     }
 }
 
@@ -208,15 +208,15 @@
         height: 108px;
         border-radius: 50%;
         background-color: rgba(18, 18, 18, 0.92);
-        border: 2px solid $primary-gold;
+        border: 2px solid variables.$primary-gold;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        @include shadow-hover;
+        @include variables.shadow-hover;
 
         span {
-            color: $white;
+            color: variables.$white;
             font-size: 0.72rem;
             letter-spacing: 3px;
             font-weight: 600;

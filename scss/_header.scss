@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use 'variables';
 
 .main-header {
     background-color: transparent;
@@ -8,7 +8,7 @@
     width: 100%;
     z-index: 100;
     padding: 2rem 0;
-    color: $white;
+    color: variables.$white;
 
     .navbar {
         display: flex;
@@ -20,12 +20,12 @@
 
         .logo {
             font-size: 1.5rem;
-            font-family: $font-header;
+            font-family: variables.$font-header;
             letter-spacing: 4px;
-            color: $white;
+            color: variables.$white;
 
             span {
-                color: $primary-gold;
+                color: variables.$primary-gold;
                 font-style: italic;
                 font-weight: 300;
             }
@@ -44,16 +44,16 @@
                 left: 0;
                 width: 100%;
                 height: 100vh;
-                background-color: $dark-obsidian;
+                background-color: variables.$dark-obsidian;
                 justify-content: center;
                 align-items: center;
                 z-index: 200;
             }
 
             a {
-                color: $white;
+                color: variables.$white;
                 text-decoration: none;
-                font-family: $font-body;
+                font-family: variables.$font-body;
                 font-size: 0.8rem;
                 letter-spacing: 2px;
                 text-transform: uppercase;
@@ -61,7 +61,7 @@
 
                 &:hover,
                 &.active {
-                    color: $primary-gold;
+                    color: variables.$primary-gold;
                 }
             }
         }
@@ -78,8 +78,8 @@
             .bar {
                 width: 30px;
                 height: 1px;
-                background-color: $white;
-                transition: $transition-long;
+                background-color: variables.$white;
+                transition: variables.$transition-long;
             }
 
             &.is-open .bar:nth-child(1) {

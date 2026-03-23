@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use 'variables';
 
 .section-heading {
     text-align: center;
@@ -6,16 +6,16 @@
     margin: 0 auto 3rem;
 
     h2 {
-        font-family: $font-header;
+        font-family: variables.$font-header;
         font-size: clamp(2.2rem, 5vw, 3.5rem);
-        color: $dark-obsidian;
+        color: variables.$dark-obsidian;
         line-height: 1.1;
     }
 }
 
 .home-hero {
     min-height: 100vh;
-    background: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+    background: url('../images/mainhotel.jpg') center/cover no-repeat;
 
     &__overlay {
         min-height: 100vh;
@@ -29,10 +29,10 @@
     &__content {
         max-width: 900px;
         text-align: center;
-        color: $white;
+        color: variables.$white;
 
         h1 {
-            font-family: $font-header;
+            font-family: variables.$font-header;
             font-size: clamp(3rem, 9vw, 5.8rem);
             line-height: 0.98;
             margin-bottom: 1.5rem;
@@ -75,15 +75,15 @@
 
     &__copy {
         h2 {
-            font-family: $font-header;
+            font-family: variables.$font-header;
             font-size: clamp(2.2rem, 5vw, 3.4rem);
-            color: $dark-obsidian;
+            color: variables.$dark-obsidian;
             margin-bottom: 1.5rem;
             line-height: 1.05;
         }
 
         p {
-            color: $text-muted;
+            color: variables.$text-muted;
             font-weight: 300;
             font-size: 1rem;
             max-width: 620px;
@@ -94,7 +94,7 @@
     &__media {
         min-height: 420px;
         overflow: hidden;
-        @include shadow-soft;
+        @include variables.shadow-soft;
 
         img {
             width: 100%;
@@ -117,16 +117,16 @@
 }
 
 .feature-card {
-    background-color: $white;
+    background-color: variables.$white;
     display: flex;
     flex-direction: column;
     height: 100%;
-    @include shadow-soft;
-    transition: $transition-long;
+    @include variables.shadow-soft;
+    transition: variables.$transition-long;
 
     &:hover {
         transform: translateY(-12px);
-        @include shadow-hover;
+        @include variables.shadow-hover;
     }
 
     &__image {
@@ -138,7 +138,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: $transition-long;
+            transition: variables.$transition-long;
         }
     }
 
@@ -150,14 +150,14 @@
         padding: 2.25rem;
 
         h3 {
-            font-family: $font-header;
+            font-family: variables.$font-header;
             font-size: 1.9rem;
             margin: 0.75rem 0 1rem;
-            color: $dark-obsidian;
+            color: variables.$dark-obsidian;
         }
 
         p {
-            color: $text-muted;
+            color: variables.$text-muted;
             font-size: 0.95rem;
             font-weight: 300;
         }
@@ -171,13 +171,13 @@
         max-width: 1400px;
         margin: 0 auto;
         background: linear-gradient(135deg, rgba(18, 18, 18, 0.96) 0%, rgba(38, 38, 38, 0.9) 100%);
-        color: $white;
+        color: variables.$white;
         padding: 4rem 2rem;
         text-align: center;
-        @include shadow-hover;
+        @include variables.shadow-hover;
 
         h2 {
-            font-family: $font-header;
+            font-family: variables.$font-header;
             font-size: clamp(2.1rem, 5vw, 3.4rem);
             line-height: 1.05;
             margin-bottom: 1.5rem;
