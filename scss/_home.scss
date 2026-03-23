@@ -1,15 +1,5 @@
 @use 'variables' as *;
 
-.section-kicker {
-    display: inline-block;
-    color: $primary-gold;
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
 .section-heading {
     text-align: center;
     max-width: 760px;
@@ -203,31 +193,5 @@
         .btn-gold-ghost {
             text-decoration: none;
         }
-    }
-}
-
-@media (min-width: 768px) {
-    .home-hero__actions {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .home-intro__grid {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-        gap: 4rem;
-    }
-
-    .home-features__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (min-width: 1200px) {
-    .home-features__grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .home-story__panel {
-        padding: 5rem 4rem;
     }
 }

@@ -1,0 +1,23 @@
+@use 'variables' as *;
+
+.main-footer {
+    background-color: $dark-obsidian;
+    color: $white;
+    padding: 6rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+
+    .footer-logo {
+        font-family: $font-header;
+        font-size: 2rem;
+        letter-spacing: 8px;
+        margin-bottom: 2rem;
+        color: $primary-gold;
+    }
+
+    p {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        color: $text-muted;
+    }
+}
