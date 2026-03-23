@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
             menuBtn.setAttribute('aria-expanded', 'false');
         }
     };
-
-    // --- 1. Menu movil ---
     if (menuBtn && navList) {
         menuBtn.setAttribute('aria-expanded', 'false');
 
@@ -89,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 4. Formulario de contacto ---
     if (contactForm) {
         const statusMessage = document.createElement('p');
         statusMessage.className = 'form-status-message';
