@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 3. Modal de reservas ---
     const toggleModal = (shouldOpen) => {
         if (modal) {
             modal.style.display = shouldOpen ? 'flex' : 'none';
